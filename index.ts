@@ -15,22 +15,23 @@
 // Importar interfaz
 import { UserData } from './user-data';
 
-let user: UserData;
+let user: UserData = {
+  name: 'Estefanía',
+  age: 32,
+  phone: 654123987,
+};
 
-function getData(dato:any):any {
-    if (typeof dato === 'number') {
-        return console.log(dato);
-      } else {
-        return 'El parámetro no es un número';
-      }
-    
+function getData(dato: any): any {
+  if (typeof dato === 'number') {
+    return console.log(dato);
+  } else {
+    return console.log('El parámetro no es un número');
+  }
 }
 
-user.name = "Diego";
-user.age = 41;
-user.phone = 654123987;
+// user.name = 'Diego';
+// user.age = 41;
+// user.phone = 654123987;
 
 getData(user.name);
 getData(user.phone);
-
-
